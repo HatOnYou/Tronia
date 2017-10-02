@@ -6,6 +6,12 @@ public class LoadingScript : Photon.MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		this.transform.Rotate (0, 0, 0.0f);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.LoadLevel(0);
+            PhotonNetwork.Disconnect();
+        }
+            
+            this.transform.Rotate (0, 0, 0.0f);
 	}
 }

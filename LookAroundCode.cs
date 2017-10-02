@@ -61,7 +61,7 @@ public class LookAroundCode : Photon.MonoBehaviour {
             {
                 rotationX -= sensitivityX;
             }
-			//rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+			rotationX += Input.GetAxis("Mouse X") * sensitivityX;
 			
 			rotArrayX.Add(rotationX);
 			

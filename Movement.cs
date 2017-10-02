@@ -44,7 +44,7 @@ public class Movement : Photon.MonoBehaviour {
 		{
 			Debug.LogWarning(this + " is not observed by this object's photonView! OnPhotonSerializeView() in this class won't be used.");
 		}
-
+       
 		if (photonView.isMine) {
 			movement ();
             look.lookAround();

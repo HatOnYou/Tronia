@@ -12,7 +12,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 	public int playerNum;
 	public Camera camera1;
 	public Camera camera2;
-
+    
 	
 	void Awake() {
 		PhotonNetwork.ConnectUsingSettings ("v4.2");
@@ -61,6 +61,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 			Cursor.visible = true;
 		} else if (PhotonNetwork.room == null){
 			//Create room
+
             if (GUI.Button(new Rect(100, 100, 150, 75), "Start Server (Press R)") || Input.GetKey(KeyCode.R))
             {
 				//PhotonNetwork.CreateRoom(roomName, new RoomOptions(){maxPlayers = 4, isOpen = true, isVisible = true}, lobbyName);
